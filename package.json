@@ -1,0 +1,56 @@
+{
+  "name": "chat-state-cloudflare-kv",
+  "version": "0.1.1",
+  "description": "Cloudflare Workers KV state adapter for Chat SDK",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "chat": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.5",
+    "@types/node": "^25.6.0",
+    "chat": "^4.26.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.7.3",
+    "vitest": "^4.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepegc/chat-state-cloudflare-kv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pepegc/chat-state-cloudflare-kv/issues"
+  },
+  "homepage": "https://github.com/pepegc/chat-state-cloudflare-kv#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "chat-sdk",
+    "cloudflare",
+    "workers-kv",
+    "state-adapter"
+  ],
+  "author": "pepegc",
+  "license": "MIT"
+}
